@@ -2,11 +2,9 @@
 #include <linux/module.h>
 #include <linux/types.h>
 
-int major_minor_num_func_test(void);
-
 MODULE_LICENSE("GPL");
 
-static int major_minor_num_init(void)
+int major_minor_num_func_test(void)
 {
     dev_t devicenumber;
     printk("Major Number :%d \n",MAJOR(devicenumber));
@@ -16,14 +14,8 @@ static int major_minor_num_init(void)
     printk("Device Number :%ld\n",devicenumber);
     printk("Major Number:%d\n",MAJOR(devicenumber));
     printk("Minor Number:%d\n",MINOR(devicenumber));
-    major_minor_num_func_test();
 
     return 0;
 }
 
-static void major_minor_num_exit(void)
-{
-}
 
-module_init(major_minor_num_init);
-module_exit(major_minor_num_exit);
