@@ -1,1 +1,0 @@
-savedcmd_/home/adithya/Projects/linux/linux-dev-drivers/basics/extract_major_minor_num.mod := printf '%s\n'   basics/extract_major_minor_num.o | awk '!x[$$0]++ { print("/home/adithya/Projects/linux/linux-dev-drivers/"$$0) }' > /home/adithya/Projects/linux/linux-dev-drivers/basics/extract_major_minor_num.mod
